@@ -72,6 +72,7 @@ const AdminLogin = () => {
     e.preventDefault();
     if (email === "admin@gmail.com" && password === "admin") {
       window.alert("Login Successful");
+      localStorage.setItem("isAdmin","true") ;
       history("/admin-grievance");
     } else {
       window.alert("You don't have this access");

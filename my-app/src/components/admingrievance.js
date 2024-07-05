@@ -4,6 +4,7 @@ import "./admingrievance.css";
 
 const Admingrievance = () => {
   const [grievances, setGrievances] = useState([]);
+  const [isadmin , setisadmin] = useState(localStorage.getItem("isAdmin"))
 
   useEffect(() => {
     const fetchGrievance = async () => {
@@ -29,6 +30,9 @@ const Admingrievance = () => {
     fetchGrievance();
   }, []);
 
+  const handleLogout = async (isadmin) => {
+    localStorage.setItem("isAdmin","False") 
+  }
   const handleDelete = async (id) => {
     try {
       const response = await fetch(`http://localhost:4000/delete/${id}`, {
@@ -85,7 +89,7 @@ const Admingrievance = () => {
           ))}
         </tbody>
       </table>
-      <Link to="/login" className="btn btn-outline-warning mx-4 mb-1 update">Logout as Admin</Link>
+      <Link to="/login" className="btn btn-outline-warning mx-4 mb-1 update" onClick={()=>handleLogout(isadmin)} >Logout as Admin</Link>
       <br />
     </>
   );
