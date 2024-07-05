@@ -1,0 +1,77 @@
+.box1 {
+    margin-top: 100px; 
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px; /* Increased to accommodate image and form side by side */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    flex: 1;
+    max-width: 200px; /* Set a max-width for the image container */
+    margin-right: 20px; /* Space between image and form */
+}
+
+.image img {
+    width: 100%; /* Ensure the image takes up the full width of its container */
+    border-radius: 5px; /* Optional: add some border-radius for styling */
+}
+
+.form-container {
+    flex: 2;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75em;
+}
+
+.button:hover {
+    background-color: #535151;
+}
+
+.signup-image-link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-image-link:hover {
+    text-decoration: underline;
+}
+
+.admin {
+    display: block;
+    margin-top: 10px;
+    color: #ae00ff;
+    text-decoration: none;
+}
+
+.admin:hover {
+    text-decoration: underline;
+}

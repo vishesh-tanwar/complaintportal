@@ -1,0 +1,360 @@
+/* .box1 {
+    margin-top: 100px; 
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    flex: 1;
+    max-width: 200px;
+    margin-right: 20px; 
+}
+
+.image img {
+    width: 100%; 
+    border-radius: 5px; 
+}
+
+.form-container {
+    flex: 2;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75em;
+}
+
+.button:hover {
+    background-color: #535151;
+}
+
+.signup-image-link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-image-link:hover {
+    text-decoration: underline;
+}
+
+.admin {
+    display: block;
+    margin-top: 10px;
+    color: #ae00ff;
+    text-decoration: none;
+}
+
+.admin:hover {
+    text-decoration: underline;
+}
+@media (min-width: 319px) {
+    .box1 {
+        flex-direction: column;
+        padding: 10px;
+        box-shadow: none;
+        max-width: 374px;
+        border: none; 
+    }
+
+    .image {
+        display: none;
+    }
+
+    .form-container {
+        flex: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-container h1 {
+        font-size: 20px;
+    }
+
+    .form-group label {
+        font-size: 15px;
+    }
+
+    .form-control {
+        font-size: 15px; 
+        padding: 8px;
+        border: none; 
+    }
+
+    button {
+        font-size: 1px;
+        padding: 8px 16px;
+    }
+    .signup-image-link{
+        font-size: 15px;
+    }
+    .admin{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 426px) {
+    .box1 {
+        margin-top: 100px; 
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        border-radius: 55px;
+        display: flex;
+        align-items: center;
+    }
+    .image{
+        display: block;
+        flex : 1;
+    }
+    .image {
+        flex: 1;
+        max-width: 200px; 
+        margin-right: 20px; 
+    }
+    
+    .image img {
+        width: 100%; 
+        border-radius: 5px; 
+    }
+
+    .form-container {
+        flex: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-container h1 {
+        font-size: 29px;
+    }
+
+    .form-group label {
+        font-size: 20px;
+    }
+
+    .form-control {
+        font-size: 15px;
+        padding: 8px; 
+        border: none; 
+    }
+
+    button {
+        font-size: 10px;
+        padding: 8px 16px;
+    }
+    .signup-image-link{
+        font-size: 20px;
+    }
+    .admin{
+        font-size: 20px;
+    }
+} */
+
+.box1 {
+    margin-top: 100px; 
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 55px;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically for smaller screens */
+}
+
+.image {
+    flex: 1;
+    max-width: 200px; /* Set a max-width for the image container */
+    margin-right: 20px; /* Space between image and form */
+}
+
+.image img {
+    width: 100%; /* Ensure the image takes up the full width of its container */
+    border-radius: 5px; /* Optional: add some border-radius for styling */
+}
+
+.form-container {
+    flex: 2;
+    width: 100%;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75em;
+}
+
+.button:hover {
+    background-color: #535151;
+}
+
+.signup-image-link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-image-link:hover {
+    text-decoration: underline;
+}
+
+.admin {
+    display: block;
+    margin-top: 10px;
+    color: #ae00ff;
+    text-decoration: none;
+}
+
+.admin:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 425px) {
+    .box1 {
+        flex-direction: column;
+        padding: 10px;
+        box-shadow: none;
+        max-width: 374px;
+        border: none; /* Remove border */
+    }
+
+    .image {
+        display: none;
+    }
+
+    .form-container {
+        flex: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-container h1 {
+        font-size: 20px;
+    }
+
+    .form-group label {
+        font-size: 15px; /* Decrease font size of labels */
+    }
+
+    .form-control {
+        font-size: 15px; /* Decrease font size of input */
+        padding: 8px; /* Adjust padding if needed */
+        border: none; /* Remove border */
+    }
+
+    .button {
+        font-size: 1px;
+        padding: 8px 16px;
+    }
+
+    .signup-image-link {
+        font-size: 15px;
+    }
+
+    .admin {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 426px) {
+    .box1 {
+        margin-top: 100px; 
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        border-radius: 55px;
+        display: flex;
+        align-items: center;
+        flex-direction: row; /* Arrange elements in a row for larger screens */
+    }
+
+    .image {
+        display: block;
+        flex: 1;
+    }
+
+    .form-container {
+        flex: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-container h1 {
+        font-size: 29px;
+    }
+
+    .form-group label {
+        font-size: 20px; /* Adjust font size of labels */
+    }
+
+    .form-control {
+        font-size: 15px; /* Adjust font size of input */
+        padding: 8px; /* Adjust padding if needed */
+    }
+
+    .button {
+        font-size: 10px;
+        padding: 8px 16px;
+    }
+
+    .signup-image-link {
+        font-size: 20px;
+    }
+
+    .admin {
+        font-size: 20px;
+    }
+}

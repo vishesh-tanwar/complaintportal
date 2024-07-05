@@ -1,0 +1,79 @@
+ .con {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgb(255, 253, 253); /* Adding a background color for visibility */
+}
+
+.con ul {
+    flex: 1;
+    list-style: none;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar-links li a {
+    color: rgb(0, 0, 0); 
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navbar-links li a:hover {
+    color: rgb(132, 0, 255);
+}
+
+@media (min-width: 319px) {
+    ul li  {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 375px) {
+    ul li  {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 425px) {
+    ul li  {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 768px) {
+    ul li  {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    ul li  {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1440px) {
+    ul li  {
+        font-size: 18px;
+    }
+}
+
+body {
+    padding-top: 60px; /* Adjust this value based on your navbar's total height */
+}
+
