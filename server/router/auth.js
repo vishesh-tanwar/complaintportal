@@ -66,7 +66,7 @@ router.post("/register", async (req, res) => {
         // Save the user to the database
         await user.save();
 
-        await sendEmail(email, 'Successfully Registered!!', `Hello ${name}, You have been successfully registered on BVICAM Grievance Portal. Kindly login. Thank you.`);
+        sendEmail(email, 'Successfully Registered!!', `Hello ${name}, You have been successfully registered on BVICAM Grievance Portal. Kindly login. Thank you.`);
 
         res.status(200).json({ message: "Registration Successful" });
     } catch (err) {
@@ -143,7 +143,7 @@ router.post("/grievance", async (req, res) => {
             const userMsg = await userContact.addGrievance(name, email, enrollment_no, grievance); 
             await userContact.save();
 
-            await sendEmail(email, 'Grievance Filed Successfully', `Hello ${name}, Your grievance has been filed successfully. We will inform you when there is a response.`);
+            sendEmail(email, 'Grievance Filed Successfully', `Hello ${name}, Your grievance has been filed successfully. We will inform you when there is a response.`);
 
             return res.status(200).json({ message: "Grievance Filed Successfully" });
         }
@@ -223,7 +223,7 @@ router.put('/update/:grievanceId', async (req, res) => {
         // Find the updated grievance
         const updatedGrievance = user.grievances.id(grievanceId);
         res.json(updatedGrievance);
-        await sendEmail(user.email, 'Grievance Status Updated', `Hello ${user.name}, Your grievance status has been updated. Please check the BVICAM website for details.`);
+        sendEmail(user.email, 'Grievance Status Updated', `Hello ${user.name}, Your grievance status has been updated. Please check the BVICAM website for details.`);
     } catch (error) {
         console.error('Error updating grievance:', error);
         res.status(400).json({ message: 'Error updating grievance', error });
