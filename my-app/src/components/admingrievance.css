@@ -1,3 +1,6 @@
+.admin1{
+  margin-top: 11px;
+}
 .Gtable {
     width: 100%;
     text-align: center; /* Align all content in the table center */
@@ -14,4 +17,29 @@
 
   .green-text {
     color: green;
+  }
+
+  .action {
+    text-decoration: none;
+    border: 2px solid black;
+    color: black;
+    font-size: 20px;
+  }
+
+  .action.update{
+    background-color: rgba(77, 255, 70, 0.779);
+    margin-right: 9px;
+  } 
+  .action.delete{
+    background-color: rgba(255, 72, 72, 0.779);
+  }
+
+  .logout{
+    text-decoration: none;
+    border: 2px solid black;
+    margin: 2px;
+    background-color: black;
+    color: white;
+    padding: 6px;
+
   }

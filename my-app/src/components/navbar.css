@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: rgb(255, 253, 253); /* Adding a background color for visibility */
+    background-color: rgb(255, 255, 255); /* Adding a background color for visibility */
 }
 
 .con ul {

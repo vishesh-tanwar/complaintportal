@@ -54,13 +54,24 @@
 
 .howtofile {
     display: flex;
-    justify-content: space-evenly;
     margin-top: 40px;
     margin-bottom: 20px;
 }
 .photo {
     padding-top: 10px;
 }
+
+.photo img {
+    width: 300px; 
+    height: auto; 
+    object-fit: contain;
+    margin-left: 200px;   
+}
+
+.text2 {
+    margin-left: 50px;
+}
+
 .text2 h2 {
     margin-bottom: 7px;
     padding-left: 110px;

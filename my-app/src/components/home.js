@@ -1,6 +1,9 @@
 import React from "react";
 import "./home.css";
 import img from "../images/bvp.jpeg"
+import bvpLogo from "../images/bvpLogo.jpeg" 
+import guy from "../images/guy.jpeg" 
+
 export default function Home() {
   return (
     <>
@@ -11,7 +14,7 @@ export default function Home() {
       <div className="headingandimage">
         <div className="text">
           <img
-            src="https://th.bing.com/th/id/OIP.nemQWo7f6qUOHs-doBivRAAAAA?rs=1&pid=ImgDetMain"
+            src={bvpLogo} 
             alt="logo"
           />
           <h1>Online Grievance Portal</h1>
@@ -37,7 +40,7 @@ export default function Home() {
       <div className="howtofile">
         <div className="photo">
           <img
-            src="https://www.kitssingapuram.ac.in/grconline/images/1.png"
+            src={guy}
             alt="Grievance Portal"
           />
         </div>

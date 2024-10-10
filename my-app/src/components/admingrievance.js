@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./admingrievance.css";
+import GrievancePieChart from './GrievancePieChart';
 
 const Admingrievance = () => {
   const [grievances, setGrievances] = useState([]);
-  const [isadmin , setisadmin] = useState(localStorage.getItem("isAdmin"))
+  // const [isadmin , setisadmin] = useState(localStorage.getItem("isAdmin"))
+  const [seenCount , setSeenCount] = useState(0);
+  const [notSeenCount , setNotSeenCount] = useState(0) ;
 
   useEffect(() => {
     const fetchGrievance = async () => {
@@ -18,8 +21,14 @@ const Admingrievance = () => {
         });
         if (response.ok) {
           const data = await response.json();
-          const sortedGrievances = data.sort((a, b) => new Date(a.date) - new Date(b.date));
+          const sortedGrievances = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+          const seen = data.filter(grievance => grievance.status === "Seen").length;
+          const notSeen = data.filter(grievance => grievance.status === "Not seen").length;
+
+          setSeenCount(seen);
+          setNotSeenCount(notSeen);
           setGrievances(sortedGrievances);
+
         } else {
           console.error("Failed to fetch grievance data");
         }
@@ -30,9 +39,9 @@ const Admingrievance = () => {
     fetchGrievance();
   }, []);
 
-  const handleLogout = async (isadmin) => {
-    localStorage.setItem("isAdmin","False") 
-  }
+  // const handleLogout = async (isadmin) => {
+  //   localStorage.setItem("isAdmin","False") 
+  // }
   const handleDelete = async (id) => {
     try {
       const response = await fetch(`http://localhost:4000/delete/${id}`, {
@@ -55,7 +64,8 @@ const Admingrievance = () => {
   };
 
   return (
-    <>
+    <div className='admin1'>
+      <GrievancePieChart seenCount={seenCount} notSeenCount={notSeenCount}/>
       <table className="Gtable table-dark">
         <thead>
           <tr>
@@ -82,16 +92,15 @@ const Admingrievance = () => {
               <td>{grievance.feedback}</td>
               <td>{new Date(grievance.date).toLocaleDateString()}</td>
               <td>
-                <Link to={`/update/${grievance._id}`} className="btn btn-outline-primary mx-4 mb-1 update">Update</Link>
-                <button onClick={() => handleDelete(grievance._id)} className="btn btn-outline-danger mx-4 mb-1">Delete</button>
+                <Link to={`/update/${grievance._id}`} className="action update">Update</Link>
+                <button onClick={() => handleDelete(grievance._id)} className="action delete">Delete</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-      <Link to="/login" className="btn btn-outline-warning mx-4 mb-1 update" onClick={()=>handleLogout(isadmin)} >Logout as Admin</Link>
       <br />
-    </>
+    </div>
   );
 };
 
